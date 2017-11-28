@@ -1,0 +1,21 @@
+<h1>Parties#game</h1>
+<p>Find me in app/views/parties/game.html.erb</p>
+
+<h2>****** Welcome to the longest word-game! ******</h2>
+<p>Here is your grid</p>
+<%= @grid_array.each do |letter| %>
+<p> <%= letter  %></p>
+<% end %>
+<h2>*****************************************************</h2>
+
+<form action="/score" method="get">
+  <label for="question">What is your longest word?</label>
+  <input type="text" id="question" name="answer" placeholder="Your answer">
+  <input type="submit" value="Let's play!">
+</form>
+<!-- ********* Welcome to the longest word-game! *********
+Here is your grid:
+Q F M R K L I T P
+*****************************************************
+What is your longest word?
+lift -->
